@@ -1,24 +1,24 @@
-# Lumen PHP Framework
+# A Microservice (API Service) using Lumen (Latest version) and MySQL. Preference: use Repository Design Pattern
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
+# Step to configure
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+    1. First clone this repository
+    2. Start MySQL server & Create a MySQL database name "test"
+    3. Create .env file to root directory and copy all from .env.example to .env
+    4. Open terminal to this project directory
+    5. Run some commands
 
-## Official Documentation
+# Commands
+    1. composer install
+    2. php artisan key:generate
+    3. php artisan jwt:secret
+    4. php artisan migrate
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
+# Start Application by runing this command
+    
+    php artisan serve
 
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Background job
+Please open another terminal to this directory and run
+    
+    php artisan queue:work
