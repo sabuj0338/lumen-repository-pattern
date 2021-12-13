@@ -30,6 +30,7 @@ Please open another terminal to this directory and run
 
 # Use Postman to test this application
 You will get a file in this root directory named (JobPreparetion.postman_collection.json) import this file to postman and check APIs
+
     1. User login
     2. User registration
     3. User logout
