@@ -9,10 +9,14 @@
     5. Run some commands
 
 # Commands
-    1. composer install
-    2. php artisan key:generate
-    3. php artisan jwt:secret
-    4. php artisan migrate
+
+    composer install
+
+    php artisan key:generate
+
+    php artisan jwt:secret
+
+    php artisan migrate
 
 # Start Application by runing this command
     
@@ -22,3 +26,14 @@
 Please open another terminal to this directory and run
     
     php artisan queue:work
+
+
+# Use Postman to test this application
+You will get a file in this root directory named (JobPreparetion.postman_collection.json) import this file to postman and check APIs
+    1. User login
+    2. User registration
+    3. User logout
+    4. Import json data (MCQ questions)
+    4. Get all MCQ question
+    5. Get single MCQ question
+    6. Delete a MCQ question and more.

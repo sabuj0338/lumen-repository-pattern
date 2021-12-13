@@ -1,0 +1,560 @@
+{
+	"info": {
+		"_postman_id": "43166963-7366-4eb1-ae32-3f679549b3a2",
+		"name": "JobPreparetion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceId",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mohammadshobooz@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "deviceId",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM4NDI4NCwiZXhwIjoxNjM5Mzg3ODg0LCJuYmYiOjE2MzkzODQyODQsImp0aSI6ImVBWTJDTjJIMEhQMjZveEsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.cmZBappXLc8019DFhGDa3j6geM3dI99s-mc8q3VgoAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import MCQ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM4NDQzNywiZXhwIjoxNjM5Mzg4MDM3LCJuYmYiOjE2MzkzODQ0MzcsImp0aSI6InRzZUdkUkVRVjdLTkJBYlkiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.r3h-vP9KAo0WIIlxZHRUp-6GEXdEulJhUAZuFREHhTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mcq\" : [\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-1\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        },\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-2\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        },\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-3\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        },\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-4\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        },\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-5\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        },\r\n        {\r\n            \"exam_id\": 1,\r\n            \"questionName\": \"question-6\",\r\n            \"questionDescription\": \"question-1\",\r\n            \"optionOne\": \"question-1\",\r\n            \"optionTwo\": \"question-1\",\r\n            \"optionThree\": \"question-1\",\r\n            \"optionFour\": \"question-1\",\r\n            \"answer\": \"question-1\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/import-mcq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"import-mcq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All MCQ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM5NjU5MywiZXhwIjoxNjM5NDAwMTkzLCJuYmYiOjE2MzkzOTY1OTMsImp0aSI6Im95UU9FYWVEeUJWejgzNlciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mdQ3AINAianPnwAb3h8Neg2BW1GEnk1AvZ2OpUU3Uqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/all-mcq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"all-mcq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single MCQ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM5NjU5MywiZXhwIjoxNjM5NDAwMTkzLCJuYmYiOjE2MzkzOTY1OTMsImp0aSI6Im95UU9FYWVEeUJWejgzNlciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mdQ3AINAianPnwAb3h8Neg2BW1GEnk1AvZ2OpUU3Uqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/show/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create MCQ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\": 1,\r\n    \"questionName\": \"question-1\",\r\n    \"questionDescription\": \"question-1\",\r\n    \"questionOne\": \"question-1\",\r\n    \"questionTwo\": \"question-1\",\r\n    \"questionThree\": \"question-1\",\r\n    \"questionFour\": \"question-1\",\r\n    \"answer\": \"question-1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-mcq",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-mcq"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookName\": \"English\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_id\" : 1,\r\n    \"topic_id\" : 1,\r\n    \"pdfName\" : \"book-1.pdf\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pdf\": [\r\n        {\r\n            \"book_id\": 1,\r\n            \"topic_id\": 1,\r\n            \"pdfName\": \"book-1.pdf\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/import-pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"import-pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Exam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"examName\" : \"Model Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-exam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-exam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Latest Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\" : \"la la lalalala dada dad ad ad ad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-latest-topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-latest-topic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"book_id\" : 1,\r\n    \"topicName\" : \"grammer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-topic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Answer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYzMDgyNjU0NCwiZXhwIjoxNjMwODMwMTQ0LCJuYmYiOjE2MzA4MjY1NDQsImp0aSI6IldYSGxzNlZ0aWVUeEc3algiLCJzdWIiOjMsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.cGXkXQjgHGGBGm_PV6uXWp8_TmoFzIHGjOzsLOiqATw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"exam_id\" : 1,\r\n    \"answers\" : [\r\n        {\r\n            \"mcq_id\" : 1,\r\n            \"answer\" : 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/create-answer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-answer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/home",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"home"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PDF by Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/topic/1/pdf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"topic",
+						"1",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Questions by Exam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/exam/1/questions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"exam",
+						"1",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete MCQ",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYzOTM5NjU5MywiZXhwIjoxNjM5NDAwMTkzLCJuYmYiOjE2MzkzOTY1OTMsImp0aSI6Im95UU9FYWVEeUJWejgzNlciLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.mdQ3AINAianPnwAb3h8Neg2BW1GEnk1AvZ2OpUU3Uqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
